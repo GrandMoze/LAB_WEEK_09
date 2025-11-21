@@ -12,47 +12,81 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun OnBackgroundTitleText(text: String) {
-    TitleText(text = text, color = MaterialTheme.colorScheme.onBackground)
+fun OnBackgroundTitleText(
+    text: String,
+    modifier: Modifier = Modifier
+) {
+    TitleText(
+        text = text,
+        color = MaterialTheme.colorScheme.onBackground,
+        modifier = modifier
+    )
 }
 
 @Composable
-fun TitleText(text: String, color: Color) {
+fun TitleText(
+    text: String,
+    color: Color,
+    modifier: Modifier = Modifier
+) {
     Text(
         text = text,
         style = MaterialTheme.typography.titleLarge,
-        color = color
+        color = color,
+        modifier = modifier
     )
 }
 
 @Composable
-fun OnBackgroundItemText(text: String) {
-    ItemText(text = text, color = MaterialTheme.colorScheme.onBackground)
+fun OnBackgroundItemText(
+    text: String,
+    modifier: Modifier = Modifier
+) {
+    ItemText(
+        text = text,
+        color = MaterialTheme.colorScheme.onBackground,
+        modifier = modifier
+    )
 }
 
 @Composable
-fun ItemText(text: String, color: Color) {
+fun ItemText(
+    text: String,
+    color: Color,
+    modifier: Modifier = Modifier
+) {
     Text(
         text = text,
         style = MaterialTheme.typography.bodySmall,
-        color = color
+        color = color,
+        modifier = modifier
     )
 }
 
 @Composable
-fun PrimaryTextButton(text: String, onClick: () -> Unit) {
+fun PrimaryTextButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     TextButton(
         text = text,
         textColor = Color.White,
-        onClick = onClick
+        onClick = onClick,
+        modifier = modifier
     )
 }
 
 @Composable
-fun TextButton(text: String, textColor: Color, onClick: () -> Unit) {
+fun TextButton(
+    text: String,
+    textColor: Color,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Button(
         onClick = onClick,
-        modifier = Modifier.padding(8.dp),
+        modifier = modifier.padding(8.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = Color.DarkGray,
             contentColor = textColor
