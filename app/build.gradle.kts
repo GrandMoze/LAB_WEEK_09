@@ -58,6 +58,8 @@ dependencies {
     // Navigation Compose (akan dipakai nanti, tapi aman ditambahkan)
     implementation("androidx.navigation:navigation-compose:2.7.4")
 
+    implementation("androidx.navigation:navigation-compose:2.7.4")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
